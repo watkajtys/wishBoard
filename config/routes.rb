@@ -1,4 +1,13 @@
 Wishboard::Application.routes.draw do
+
+  get "board/index"
+
+  resources :wishes
+
+  resources :posts
+
+  root :to => "board#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 gem 'mongoid'
 gem 'bson_ext'
+gem "haml", "~> 4.0.2"
 
 
 # Gems used only for assets and not required
