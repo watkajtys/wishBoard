@@ -2,9 +2,11 @@ Wishboard::Application.routes.draw do
 
   get "board/index"
 
-  resources :wishes
+  # resources :wishes
 
   resources :posts
+
+  resources :board
 
   root :to => "board#index"
   

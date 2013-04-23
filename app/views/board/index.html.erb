@@ -1,9 +1,9 @@
-<h1>Board#index</h1>
-<p>Find me in app/views/board/index.html.erb</p>
+<h1>Wish Board</h1>
 
+<%= render :partial => "input" %>
 
 <% @posts.each do |post| %>
-   <p>
+   <h2>
       <%= post.entry %>
-   </p>
+   </h2>
 <% end %>
