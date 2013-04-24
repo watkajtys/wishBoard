@@ -4,6 +4,7 @@
    <i class="icon-double-angle-left icon-4x left"></i>
 </div>
 
+<span class="prompt"></span>
 <%= render :partial => "input" %>
 
 <div>
@@ -12,6 +13,6 @@
 
 <% @posts.each do |post| %>
    <h2>
-      <%= post.entry %>
+      <%= post.prepend %> <%= post.entry %>
    </h2>
 <% end %>
