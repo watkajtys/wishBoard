@@ -44,6 +44,7 @@ group :test do
     gem "database_cleaner"
     gem "capybara"
     gem "capybara-webkit"
+    gem 'ruby-prof'
 end
 
 # To use ActiveModel has_secure_password
