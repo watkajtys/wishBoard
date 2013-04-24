@@ -7,12 +7,15 @@
 <span class="prompt"></span>
 <%= render :partial => "input" %>
 
+<div class="picker red" data-color="red"></div>
+<div class="picker blue" data-color="blue"></div>
+
 <div>
    <i class="icon-double-angle-right icon-4x right"></i>
 </div> 
 
 <% @posts.each do |post| %>
    <h2>
-      <%= post.prepend %> <%= post.entry %>
+      <%= post.prepend %> <span style="color: <%= post.color %>;"><%= post.entry %></span>
    </h2>
 <% end %>

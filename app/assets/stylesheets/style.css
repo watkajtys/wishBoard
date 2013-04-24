@@ -1,0 +1,16 @@
+body {
+   background-image: url('dark_wall.png');
+   color: #F3F2F2;
+}
+
+.blue {
+   background-color: blue;
+   width: 30px;
+   height: 30px;
+}
+
+.red {
+   background-color: red;
+   width: 30px;
+   height: 30px;
+}
