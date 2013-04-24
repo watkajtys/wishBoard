@@ -1,4 +1,5 @@
-<% colors = ['#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89'] %>
+<!-- If new colors are added...validations in post.rb MUST BE UPDATED -->
+<% colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89'] %>
 
 <% colors.each do |color| %>
    <div class="picker" data-color= <%= color %> style="background-color: <%= color %>; height:50px; width: 50px;"></div>

@@ -56,4 +56,14 @@ class PostTest < ActiveSupport::TestCase
       assert_false post.save
    end
 
+   test "Color cannot be outside of approved list (dictated in post.rb)" do
+      post = FactoryGirl.build(:post, color: "Apples")
+      assert_false post.save
+   end
+
+   test "Approved color (#fff799) allows save" do
+      post = FactoryGirl.build(:post, color: '#fff799')
+      assert_true post.save
+   end
+
 end
