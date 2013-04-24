@@ -50,4 +50,10 @@ class PostTest < ActiveSupport::TestCase
       post = FactoryGirl.build(:post, prepend: 'I miss')
       assert_true post.save
    end
+
+   test "There must be a color value on each post" do 
+      post = FactoryGirl.build(:post, color: nil)
+      assert_false post.save
+   end
+
 end

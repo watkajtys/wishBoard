@@ -5,6 +5,9 @@
    <div class="field">
       <%= f.text_field :entry %>
    </div>
+   <div class="hidden">
+      <%= f.hidden_field :color, :value => "#F3F2F2" %>
+   </div>
    <div class="actions">
       <%= f.submit "Write" %>
    </div>

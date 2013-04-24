@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :post do
    prepend "I wish"
    entry "upon a star..."
+   color "#F3F2F2"
   end
 end
