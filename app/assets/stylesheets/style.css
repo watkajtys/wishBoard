@@ -3,14 +3,30 @@ body {
    color: #F3F2F2;
 }
 
-.blue {
-   background-color: blue;
-   width: 30px;
-   height: 30px;
+i {
+   display: inline;
 }
 
-.red {
-   background-color: red;
-   width: 30px;
-   height: 30px;
+.picker {
+   display: inline-block;
+   margin: 1px;
+}
+
+.prompt {
+   display: inline;
+   float: left;
+}
+.form {
+   display: inline;
+   padding: 5px;
+   float: none;
+}
+
+
+input[type=text] {
+   background: rgba(255, 255, 255, 0.4);
+}
+
+h2 { 
+
 }
