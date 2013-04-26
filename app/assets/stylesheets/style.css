@@ -1,6 +1,7 @@
 body {
    background-image: url('dark_wall.png');
    color: #F3F2F2;
+   font-family: 'Indie Flower', cursive;
 }
 
 .container {
@@ -12,7 +13,22 @@ body {
    display: inline-block;
    float: left;
    padding-top: 12px;
-   padding-right: 30px;
+   margin-left: 30px;
+}
+
+.prompt {
+   display: inline-block;
+   float: left;
+   font-size: 3em;
+   font-style: bold;
+   margin-left: 30px;
+   font-family: 'Abel', sans-serif;
+}
+
+.form {
+   display: inline-block;
+   float: left;
+   margin-left: 10px;
 }
 
 .right {
@@ -22,20 +38,9 @@ body {
    padding-left: 30px;
 }
 
-.prompt {
-   display: inline-block;
-   float: left;
-   font-size: 2.5em;
-   font-style: bold;
-}
-
-.form {
-   display: inline-block;
-   float: left;
-}
-
 .prompt_container {
    display: block;
+   min-width: 900px;
 }
 
 .color_container {
@@ -65,6 +70,14 @@ body {
 
 .prepend {
    text-decoration: underline;
+   font-family: 'Abel', sans-serif;
+   text-transform: uppercase;
+   font-size: 4em;
+   font-weight: bolder;
+}
+
+.entry {
+   font-size: 4em;
 }
 
 input[type=text] {
@@ -72,6 +85,8 @@ input[type=text] {
    font-size: 2.5em;
    color: #f3f2f2;
    width: 90%;
+   font-family: 'Indie Flower', cursive;
+   letter-spacing:3px;
 }
 
 h2 { 
