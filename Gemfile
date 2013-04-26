@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'mongoid'
 gem 'bson_ext'
 gem "font-awesome-rails"
+gem 'kaminari'
 
 gem "haml", "~> 4.0.2"
 
