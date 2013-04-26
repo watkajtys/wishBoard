@@ -1,18 +1,13 @@
 <div class = 'form'>
    <%= form_for(@post) do |f| %>
 
-      <div class ="hidden">
-         <%= f.hidden_field :prepend, :value => "I wish" %>
-      </div>
-      <div class="field">
-         <%= f.text_field :entry %>
-      </div>
-      <div class="hidden">
-         <%= f.hidden_field :color, :value => "#f3f2f2" %>
-      </div>
-      <div class="actions">
-         <%= f.submit "Write" %>
-      </div>
+      <%= f.hidden_field :prepend, :value => "I wish" %>
+      
+      <%= f.text_field :entry %>
+      
+      <%= f.hidden_field :color, :value => "#f3f2f2" %>
+      
+      <%= f.submit "Write" %>
       
    <% end %>
 </div>

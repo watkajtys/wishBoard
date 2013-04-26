@@ -3,28 +3,75 @@ body {
    color: #F3F2F2;
 }
 
-i {
-   display: inline;
+.container {
+   width: 100%;
+}
+
+.left {
+
+   display: inline-block;
+   float: left;
+   padding-top: 12px;
+   padding-right: 30px;
+}
+
+.right {
+   display: inline-block;
+   float: left;
+   padding-top: 12px;
+   padding-left: 30px;
+}
+
+.prompt {
+   display: inline-block;
+   float: left;
+   font-size: 2.5em;
+   font-style: bold;
+}
+
+.form {
+   display: inline-block;
+   float: left;
+}
+
+.prompt_container {
+   display: block;
+}
+
+.color_container {
+   display: block;
+   clear: both;
 }
 
 .picker {
    display: inline-block;
-   margin: 1px;
-}
-
-.prompt {
-   display: inline;
    float: left;
-}
-.form {
-   display: inline;
-   padding: 5px;
-   float: none;
+   margin: 5px;
 }
 
+.post_container {
+   display: block;
+   clear: both;
+   margin-top: 75px;
+   margin-left: 50px;
+   width: 100%;
+   text-align: left;
+}
+
+.posts {
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.prepend {
+   text-decoration: underline;
+}
 
 input[type=text] {
-   background: rgba(255, 255, 255, 0.4);
+   background: rgba(54, 54, 54, 0.6);
+   font-size: 2.5em;
+   color: #f3f2f2;
+   width: 90%;
 }
 
 h2 { 

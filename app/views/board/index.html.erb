@@ -3,23 +3,28 @@
 
 <h1>Wish Board</h1>
 
-<div>
+<div class = "prompt_container">
    <i class="icon-double-angle-left icon-4x left"></i>
+
+   <span class="prompt"></span>
+
+   <div class = "form"> <%= render :partial => 'input' %></div>
+
+   <i class="icon-double-angle-right icon-4x right"></i>
+
 </div>
 
-<span class="prompt"></span>
+<div class = "color_container">
+   <div class = "color"><%= render :partial => 'colors'%></div>
+</div>
 
-<%= render :partial => 'input' %>
-
-<%= render :partial => 'colors'%>
-
-<div>
-   <i class="icon-double-angle-right icon-4x right"></i>
-</div> 
-
-<% @posts.each do |post| %>
-   <h2>
-      <%= post.prepend %> <span style="color: <%= post.color %>;"><%= post.entry %></span>
-   </h2>
-<% end %>
-<%= paginate @posts %>
+<div class="post_container">
+   <div class="posts">
+      <% @posts.each do |post| %>
+         <h2>
+            <span class="prepend"><%= post.prepend %></span> <span style="color: <%= post.color %>;"><%= post.entry %></span>
+         </h2>
+      <% end %>
+   </div>
+   <%= paginate @posts %>
+</div>
