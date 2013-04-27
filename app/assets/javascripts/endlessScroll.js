@@ -1,23 +1,35 @@
 $(document).ready(function(){
-   $(window).scroll(function(){
+   var page = 1;
+   var loading = false;
+   var $posts = $('.posts');
+
+   var onScroll = function(){
       var totalHeight = document.body.offsetHeight;
       var visibleHeight = document.documentElement.clientHeight;
       var currentScroll = $(document).scrollTop();
-      var page = 1,loading = false;
 
-      if (visibleHeight + currentScroll >= totalHeight) {
-         console.log('bottom');
+      if (visibleHeight + currentScroll >= totalHeight && loading == false) {
          page++;
-         console.log(page);
          loading = true;
-         // $.ajax({
-         //    url: '/index?page=' + page;
-         //    type: 'get',
-         //    dataType:
-            // sucess: function() {
-            //    $(window).append();
-            //    loading = false;
-            // }
+         console.log('bottom');
+         $.ajax({
+            url: '/index.json?page=' + page,
+            type: 'get',
+            dataType: "json", 
+            success: onAjaxSuccess
+         })
       };
-   });
+   };
+
+   var onAjaxSuccess = function(data, status, xhr) {
+      for (var i = 0; i<data.length; i++){
+         var $div = $('<div>').addClass('posts');
+         $('<span>').addClass('prepend').html(data[i].prepend).appendTo($div);
+         $('<span>').addClass('entry').html(data[i].entry).css({color: data[i].color}).appendTo($div);
+         $div.appendTo($posts);
+      }
+      loading = false;
+   };
+
+   $(window).scroll(onScroll);
 });
