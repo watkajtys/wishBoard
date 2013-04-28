@@ -12,17 +12,24 @@ body {
 
    display: inline-block;
    float: left;
-   padding-top: 12px;
    margin-left: 30px;
 }
 
 .prompt {
    display: inline-block;
    float: left;
-   font-size: 3em;
+   font-size: 3.25em;
    font-style: bold;
    margin-left: 30px;
    font-family: 'Abel', sans-serif;
+   text-transform: uppercase;
+   width: 140px;
+}
+
+.right {
+   display: inline-block;
+   float: left;
+   padding-left: 20px;
 }
 
 .form {
@@ -31,11 +38,8 @@ body {
    margin-left: 10px;
 }
 
-.right {
-   display: inline-block;
-   float: left;
-   padding-top: 12px;
-   padding-left: 30px;
+.submit {
+   margin-left: 300px;
 }
 
 .prompt_container {
@@ -46,6 +50,7 @@ body {
 .color_container {
    display: block;
    clear: both;
+   margin-left: 30px;
 }
 
 .picker {
@@ -69,7 +74,7 @@ body {
 }
 
 .prepend {
-   text-decoration: underline;
+   border-bottom: 3px solid;
    font-family: 'Abel', sans-serif;
    text-transform: uppercase;
    font-size: 4em;
@@ -78,6 +83,8 @@ body {
 
 .entry {
    font-size: 4em;
+   margin-left: 10px;
+   opacity: 0.90;
 }
 
 input[type=text] {
@@ -86,7 +93,8 @@ input[type=text] {
    color: #f3f2f2;
    width: 90%;
    font-family: 'Indie Flower', cursive;
-   letter-spacing:3px;
+   letter-spacing:1px;
+   padding-left: 10px;
 }
 
 h2 { 
