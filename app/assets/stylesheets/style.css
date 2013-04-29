@@ -6,6 +6,7 @@ body {
 
 .container {
    width: 100%;
+   clear: both;
 }
 
 .left {
@@ -20,7 +21,7 @@ body {
    float: left;
    font-size: 3.25em;
    font-style: bold;
-   margin-left: 30px;
+   margin-left: 20px;
    font-family: 'Abel', sans-serif;
    text-transform: uppercase;
    width: 140px;
@@ -29,14 +30,13 @@ body {
 .right {
    display: inline-block;
    float: left;
-   padding-left: 20px;
+   padding-left: 10px;
 }
 
 .form {
    display: inline-block;
    float: left;
-   margin-left: 10px;
-   width: 65%;
+   margin-left: 20px;
 }
 
 .prompt_container {
@@ -47,7 +47,7 @@ body {
 .color_container {
    display: block;
    clear: both;
-   margin-left: 30px;
+   margin-left: 35px;
 }
 
 .picker {
@@ -64,6 +64,7 @@ body {
    width: 95%;
    text-align: left;
    letter-spacing: 2.5px;
+   margin-bottom: 100px;
 }
 
 .posts {
@@ -89,6 +90,7 @@ body {
 input[type=text] {
    background: rgba(54, 54, 54, 0.6);
    font-size: 2.5em;
+   letter-spacing: 2.5px;
    color: #f3f2f2;
    width: 90%;
    font-family: 'Indie Flower', cursive;
@@ -96,12 +98,19 @@ input[type=text] {
 }
 
 input[type=submit] {
-   font-size: 2em;
+   font-size: 1.25em;
+   width: 92%;
+   border-style: inset;
+   background-color: #f3f2f2;
+   opacity: .50;
+   color: #323232;
+   transition: .25s ease-in-out;
+   text-transform: uppercase;
 }
 
 input[type=submit]:hover{
-   color: orange;
-   transition: .25s;
+   color: #323232;
+   opacity: .95;
 }
 
 h2 { 
