@@ -6,6 +6,10 @@
       <%= f.text_field :entry %>
       
       <%= f.hidden_field :color, :value => "#f3f2f2" %>
+
+      <div class = "color_container">
+         <div class = "color"><%= render :partial => 'colors'%></div>
+      </div>
       
       <span class='submit'><%= f.submit "Post to the wall" %></span>
       

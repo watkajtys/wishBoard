@@ -81,7 +81,7 @@ body {
 .color_container {
    display: block;
    clear: both;
-   margin-left: 35px;
+   margin-left: -5px;
 }
 
 .picker {
@@ -133,7 +133,7 @@ input[type=text] {
 
 input[type=submit] {
    font-size: 1.25em;
-   width: 92%;
+   width: 93%;
    border-style: inset;
    background-color: #f3f2f2;
    opacity: .50;
