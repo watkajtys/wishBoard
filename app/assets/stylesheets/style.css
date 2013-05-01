@@ -148,10 +148,6 @@ input[type=submit]:hover{
    opacity: .95;
 }
 
-h2 { 
-
-}
-
 @media screen and (max-width: 1120px) {
    
    .prompt_container {
@@ -272,8 +268,6 @@ h2 {
    input[type=submit] {
       width: 415px;
    }
-}
-
 }
 
 @media screen and (max-width: 491px) {
