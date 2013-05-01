@@ -23,7 +23,7 @@ $(document).ready(function(){
 
    var onAjaxSuccess = function(data, status, xhr) {
       for (var i = 0; i<data.length; i++){
-         var $div = $('<div>').addClass('posts');
+         var $div = $('<h2>');
          $('<span>').addClass('prepend').html(data[i].prepend).appendTo($div);
          $('<span>').addClass('entry').html(data[i].entry).css({color: data[i].color}).appendTo($div);
          $div.appendTo($posts);
