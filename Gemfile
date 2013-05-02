@@ -10,6 +10,7 @@ gem 'mongoid'
 gem 'bson_ext'
 gem "font-awesome-rails"
 gem 'kaminari'
+gem 'newrelic_rpm'
 
 gem "haml", "~> 4.0.2"
 
