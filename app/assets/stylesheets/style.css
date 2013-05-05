@@ -104,13 +104,12 @@ body {
    text-align: left;
    letter-spacing: 2.5px;
    padding-bottom: 50px;
-   width: 90%;
+   width: 75%;
    padding-left: 240px;
    text-indent:-190px;
 }
 
 .posts {
-  
 }
 
 .prepend {
@@ -239,7 +238,7 @@ input[type=submit]:hover{
    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
    .prompt_container {
       margin-left: 20px;
       font-size: .85em;
