@@ -247,7 +247,7 @@ input[type=submit]:hover{
 
    .post_container {
       position: relative;
-      top: 150px;
+      top: 200px;
    }
 
    .form {
@@ -269,10 +269,12 @@ input[type=submit]:hover{
 
    .picker {
       width: 50.9px;
+      height: 50px;
    }
 
    input[type=submit] {
-      width: 415px;
+      width: 416px;
+      height: 50px;
    }
 }
 
