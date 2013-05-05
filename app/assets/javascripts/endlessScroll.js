@@ -8,7 +8,7 @@ $(document).ready(function(){
       var visibleHeight = document.documentElement.clientHeight;
       var currentScroll = $(document).scrollTop();
 
-      if (visibleHeight + currentScroll >= totalHeight + 100px && loading == false) {
+      if (visibleHeight + currentScroll >= totalHeight + 250 && loading == false) {
          page++;
          loading = true;
          console.log('bottom');
