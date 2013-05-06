@@ -21,7 +21,7 @@ body {
    padding: 10px;
    clear: both;
    transition: .25s ease-in-out;
-   opacity: .25;
+   opacity: .4;
    border-top-left-radius: 10px;
    border-bottom-left-radius: 10px;
    z-index: 1;
