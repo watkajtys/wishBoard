@@ -48,6 +48,7 @@ group :test do
     gem "capybara"
     gem "capybara-webkit"
     gem 'ruby-prof'
+    gem 'pry-rails'
 end
 
 # To use ActiveModel has_secure_password
