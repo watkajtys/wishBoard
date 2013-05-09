@@ -66,4 +66,9 @@ class PostTest < ActiveSupport::TestCase
       assert_true post.save
    end
 
+   test "full text generates the prepend plus the entry" do
+      post = FactoryGirl.build(:post)
+      assert_equal "I wish upon a star...", post.fulltext
+   end
+
 end
