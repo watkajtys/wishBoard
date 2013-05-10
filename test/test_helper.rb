@@ -8,4 +8,8 @@ class ActiveSupport::TestCase
   # Note: You'll currently still have to declare fixtures explicitly in integration tests
   # -- they do not yet inherit this setting
   # Add more helper methods to be used by all tests here...
+
+   setup {
+      Mongoid.default_session.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+   }
 end
