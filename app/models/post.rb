@@ -18,5 +18,12 @@ class Post
       "#{prepend} #{entry}"
    end
 
+   def self.tweet_untweeted
+      Post.notTweeted.each do |p|
+         puts ("Tweeted" + fulltext)
+         p.tweeted = true
+      end
+   end
+
    scope :notTweeted, where(tweeted: false)
 end
