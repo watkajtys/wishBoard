@@ -4,9 +4,10 @@ class Post
    field :prepend
    field :entry
    field :color
-   # field :tweeted
+   field :tweeted, :default => false
 
-   # validates_inclusion_of :tweeted, in: [true, false]
+   validates_inclusion_of :tweeted, in: [true, false]
+   validates_presence_of :tweeted
    validates_inclusion_of :prepend, in: ["I wish", "I want", "I miss"]
    validates_presence_of :entry
    validates :entry, :length => {:in => 3..120}
@@ -18,6 +19,12 @@ class Post
    end
 
    def self.tweet_untweeted
-
+      Post.notTweeted.each do |p|
+         Twitter.update(p.fulltext)
+         p.tweeted = true
+         p.save
+      end
    end
+
+   scope :notTweeted, where(tweeted: false)
 end

@@ -66,6 +66,21 @@ class PostTest < ActiveSupport::TestCase
       assert_true post.save
    end
 
+   test ":tweeted is not blank" do 
+      post = FactoryGirl.build(:post, tweeted: nil)
+      assert_false post.save
+   end
+
+   test ":tweeted can only be true or false" do
+      post = FactoryGirl.build(:post, tweeted: 'apples')
+      assert_false post.save
+   end
+
+   test ":tweeted defaults to false" do
+      post = FactoryGirl.build(:post)
+      assert_equal false, post.tweeted
+   end
+
    test "full text generates the prepend plus the entry" do
       post = FactoryGirl.build(:post)
       assert_equal "I wish upon a star...", post.fulltext
