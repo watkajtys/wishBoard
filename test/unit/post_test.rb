@@ -19,13 +19,13 @@ class PostTest < ActiveSupport::TestCase
       assert_false post.save
    end
 
-   test "an entry cannot be more than 160 characters long" do
+   test "an entry cannot be more than 120 characters long" do
       post = FactoryGirl.build(:post, entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus. This is still short. AH!")
       assert_false post.save
    end
 
-   test "an entry that is 160 characters or less is valid" do 
-      post = FactoryGirl.build(:post, entry: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus. This is still short." )
+   test "an entry that is 120 characters or less is valid" do 
+      post = FactoryGirl.build(:post, entry: "This is an entry that is less than 120 characters" )
       assert_true post.save
    end
 
