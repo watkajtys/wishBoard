@@ -20,8 +20,9 @@ class Post
 
    def self.tweet_untweeted
       Post.notTweeted.each do |p|
-         puts ("Tweeted" + fulltext)
+         Twitter.update(p.fulltext)
          p.tweeted = true
+         p.save
       end
    end
 
