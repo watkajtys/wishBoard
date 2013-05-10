@@ -5,5 +5,6 @@ FactoryGirl.define do
    prepend "I wish"
    entry "upon a star..."
    color "#f5989d"
+   tweeted false
   end
 end
