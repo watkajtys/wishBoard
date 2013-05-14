@@ -6,7 +6,7 @@ Wishboard::Application.routes.draw do
 
   resources :posts
 
-  root :to => "board#index"
+  root :to => "static#start"
   get "index.json", :to => "board#index"  
 
   namespace :api do
