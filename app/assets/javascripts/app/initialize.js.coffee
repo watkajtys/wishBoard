@@ -1,11 +1,11 @@
-@inspire = angular.module('inspire', [])
+@inspire = angular.module('inspire', ['ngResource'])
 
 @inspire.config(($routeProvider, $locationProvider) ->
    $locationProvider.html5Mode(true)
 
    $routeProvider
-      .when("/", {template: "images/board", controller: "PostsController"})
-      .otherwise({template: "Page not found. Something got fucked up."})
+      .when("/", {templateUrl: "posts/board", controller: "PostsController"})
+      .otherwise({templateUrl: "Page not found. Something got fucked up."})
 )
 
 @inspire.run(['$window', '$templateCache', ($window, $templateCache) -> 

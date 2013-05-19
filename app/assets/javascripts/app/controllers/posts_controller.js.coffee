@@ -1,0 +1,2 @@
+@inspire.controller("PostsController", ($scope) ->
+)

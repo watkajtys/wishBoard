@@ -1,8 +1,9 @@
-%html{:'ng-app' => true}
+%html{:'ng-app' => 'inspire'}
    %head
       %title Inspireboard
       = stylesheet_link_tag "application", :media => "all"
       = javascript_include_tag "application"
       = csrf_meta_tags
    %body
-      = yield
+      %div{:'ng-controller' => "PostsController"}
+      %div{:'ng-view' => ""}
