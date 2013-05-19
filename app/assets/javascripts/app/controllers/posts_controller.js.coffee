@@ -1,2 +1,3 @@
-@inspire.controller("PostsController", ($scope) ->
+@inspire.controller("PostsController", ($scope, Post) ->
+   $scope.posts = Post.query()
 )

@@ -1,2 +1,5 @@
 %h1 This is the board!
 %p thsahdaoh
+
+%div.post{:'ng-repeat' => 'post in posts'}
+   %h2 {{post.prepend}}
