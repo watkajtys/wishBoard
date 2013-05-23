@@ -10,8 +10,8 @@
 
 .post_container
    / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
-   %div.posts{:'ng-repeat' => 'post in posts'}
+   %div.post{:'ng-repeat' => 'post in posts', :'ng-class' => '{new: post.isNew}'}
       %h2
-      
+
          %span{:class => "prepend"} {{post.prepend}}
          %span{:class => "entry", :style => "color: {{post.color}}"} {{post.entry}}
