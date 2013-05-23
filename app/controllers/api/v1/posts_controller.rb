@@ -8,11 +8,6 @@ class Api::V1::PostsController < ApplicationController
 
    def create
       @post = Post.create(params[:post])
-      # if @post.save
-      #    redirect_to [:root], notice: "Your wish has been added!" 
-      # else
-      #    redirect_to [:root], alert: @post.errors.full_messages
-      # end
       respond_with @post, location: "/"
    end
 end

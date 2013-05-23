@@ -3,7 +3,7 @@ class Post
 
    field :prepend
    field :entry
-   field :color
+   field :color, :default => "#f3f2f2"
    field :tweeted, :default => false
 
    validates_inclusion_of :tweeted, in: [true, false]
