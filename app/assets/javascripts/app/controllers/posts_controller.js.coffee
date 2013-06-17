@@ -1,4 +1,6 @@
 @inspire.controller "PostsController", ($scope, Post, postService) ->
+
+
    
    $scope.initializeNewPost = ->
       $scope.newPost = {isNew: true}
@@ -17,8 +19,6 @@
             $scope.newPost.isNew = false
             console.log 'appended posts:', $scope.posts
             $scope.initializeNewPost()
-
-            console.log(data)
          (response) ->
             $scope.errors = response.data.errors
             console.log($scope.errors)
