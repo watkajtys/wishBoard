@@ -113,9 +113,6 @@ body {
    text-indent:-190px;
 }
 
-.posts {
-}
-
 .prepend {
    border-bottom: 3px solid;
    font-family: 'Abel', sans-serif;
@@ -206,7 +203,7 @@ input[type=submit]:hover{
       margin-left: 20px;
    }
 
-   .posts {
+   .post {
       font-size: .85em;
    }
 
@@ -248,7 +245,7 @@ input[type=submit]:hover{
       font-size: .85em;
    }
 
-   .posts {
+   .post {
       font-size: .70em;
    }
 
@@ -312,7 +309,7 @@ input[type=submit]:hover{
       padding-top: 70px;
    }
 
-   .posts {
+   .post {
       font-size: .5em;
    }
 
