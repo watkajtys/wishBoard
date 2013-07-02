@@ -1,9 +1,16 @@
-@inspire.controller "PostsController", ($scope, Post, postService) ->
+@inspire.controller "PostsController", ($scope, Prepend, Post, postService) ->
 
 
-   
+   $scope.NewPost = { prepend : "I wish" }
+
+   $scope.widget = {title: 'abc'}
+        
+   $scope.set = (new_title) ->
+      @widget.title = new_title
+
+
    $scope.initializeNewPost = ->
-      $scope.newPost = {isNew: true}
+      $scope.newPost = {isNew: true, prepend: "I wish"}
       $scope.posts.unshift $scope.newPost
 
    postService.async().then (data) ->
