@@ -3,14 +3,21 @@
 
    $scope.NewPost = { prepend : "I wish" }
 
-   $scope.widget = {title: 'abc'}
-        
+   $scope.selection = [0, 1, 2]
+
+   $scope.options = ['I wish', 'I want', 'I miss']
+
+   $scope.selectPrompt = ->
+      $scope.choice = Math.floor(Math.random()*3)
+      console.log $scope.choice
+      $scope.chosen = $scope.options[$scope.choice]
+      console.log $scope.chosen
+
    $scope.set = (new_title) ->
       @widget.title = new_title
 
-
    $scope.initializeNewPost = ->
-      $scope.newPost = {isNew: true, prepend: "I wish"}
+      $scope.newPost = {isNew: true, prepend: $scope.chosen}
       $scope.posts.unshift $scope.newPost
 
    postService.async().then (data) ->

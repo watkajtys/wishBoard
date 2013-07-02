@@ -1,15 +1,13 @@
 .prompt_container
    %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "count = count - 1 ", :'ng-init' => "count = 0"}
-   {{count}}
+   %h1{:class => 'prompt', :'ng-init' => "selectPrompt()"} {{chosen}}
    %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "count = count + 1"}
 
 / %input{:type => "text", :'ng-model' => 'newPost.prepend', :placeholder => '{{prepend.key}}', :value => '{{prepend.key}}' }
 %input{:type => "text", :'ng-model' => 'newPost.entry'}
-.div
-%button{:'ng-click' => "savePost()"} Post to Wall
 
-%input{ :'ng-model' => 'widget.title'}
-%button{ :'ng-click' => "set('foo')"} Set to Food
+.div
+   %button{:'ng-click' => "savePost()"} Post to Wall
 
 .post_container
    / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
