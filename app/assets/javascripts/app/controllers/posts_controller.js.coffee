@@ -1,8 +1,5 @@
 @inspire.controller "PostsController", ($scope, Post, postService) ->
 
-
-   # $scope.NewPost = { prepend : "I wish" }
-
    $scope.options = ['I wish', 'I want', 'I miss']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!']
 
@@ -39,7 +36,6 @@
          (data) ->
             # $scope.posts.unshift $scope.newPost # appending
             $scope.newPost.isNew = false
-            # console.log 'appended posts:', $scope.posts
             $scope.initializeNewPost()
          (response) ->
             $scope.errors = response.data.errors
