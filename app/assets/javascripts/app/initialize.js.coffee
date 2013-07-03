@@ -1,4 +1,4 @@
-@inspire = angular.module('inspire', ['ngResource'])
+@inspire = angular.module('inspire', ['ngResource', 'infinite-scroll'])
 
 @inspire.config(($routeProvider, $locationProvider) ->
    $locationProvider.html5Mode(true)
