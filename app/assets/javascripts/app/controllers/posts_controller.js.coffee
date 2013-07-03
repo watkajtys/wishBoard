@@ -16,7 +16,8 @@
       $scope.chosen = $scope.options[$scope.choice]
 
    $scope.initializeNewPost = ->
-      $scope.newPost = { isNew: true }
+      $scope.selectPrompt()
+      $scope.newPost = { isNew: true, prepend: $scope.chosen }
       $scope.posts.unshift $scope.newPost
 
    $scope.$watch "chosen", ->
