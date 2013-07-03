@@ -5,10 +5,17 @@
 
    $scope.options = ['I wish', 'I want', 'I miss']
 
-   $scope.iteratePrompt = ->
+   $scope.iteratePromptUp = ->
       max = $scope.options.length - 1
       $scope.choice = $scope.choice + 1
       $scope.choice = 0 if $scope.choice > max
+      $scope.chosen = $scope.options[$scope.choice]
+
+   $scope.iteratePromptDown = ->
+      max = $scope.options.length - 1
+      $scope.choice = $scope.choice - 1
+      $scope.choice = 0 if $scope.choice > max
+      $scope.choice = max if $scope.choice < 0
       $scope.chosen = $scope.options[$scope.choice]
 
    $scope.selectPrompt = ->

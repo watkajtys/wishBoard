@@ -1,7 +1,7 @@
 .prompt_container
-   %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "count = count - 1 ", :'ng-init' => "count = 0"}
+   %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePromptDown()"}
    %h1{:class => 'prompt'} {{chosen}}
-   %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt()"}
+   %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePromptUp()"}
 
 / %input{:type => "text", :'ng-model' => 'newPost.prepend', :placeholder => '{{prepend.key}}', :value => '{{prepend.key}}' }
 %input{:type => "text", :'ng-model' => 'newPost.entry'}
