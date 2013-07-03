@@ -1,10 +1,10 @@
 .prompt_container
    %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
-   %h1{:class => 'prompt'} {{chosen}}
+   %h1{:class => 'prompt'} {{chosen.prompt}}
    %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
 / %input{:type => "text", :'ng-model' => 'newPost.prepend', :placeholder => '{{prepend.key}}', :value => '{{prepend.key}}' }
-%input{:type => "text", :'ng-model' => 'newPost.entry'}
+%input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}'}
 
 .div
    %button{:'ng-click' => "savePost()"} Post to Wall
