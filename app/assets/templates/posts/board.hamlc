@@ -9,9 +9,10 @@
 .div
    %button{:'ng-click' => "savePost()"} Post to Wall
 
-.post_container{'infinite-scroll' => "nextPage()", 'infinite-scroll-disabled' => 'loading', 'infinite-scroll-distance' => 1}
+.post_container
    / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
    %div.post{:'ng-repeat' => 'post in posts', :'ng-class' => '{new: post.isNew}' }
       %h2
          %span{:class => "prepend"} {{post.prepend}}
          %span{:class => "entry", :style => "color: {{post.color}}"} {{post.entry}}
+   %button.control{:'ng-click' => 'nextPage()'}Load More

@@ -26,23 +26,21 @@
    $scope.$watch "chosen", ->
       $scope.newPost.prepend = $scope.chosen.prompt
 
-
    $scope.posts = []
    $scope.loading = false
    $scope.page = 1
+
    $scope.nextPage = ->
-      $scope.page = $scope.page + 1
       return if $scope.loading
       $scope.loading = true
       url = "api/v1/posts.json?page=" + $scope.page
       $http.get(url).success (data) ->
          $scope.posts = $scope.posts.concat(data);
          $scope.loading = false
+         $scope.page = $scope.page + 1
 
-   postService.async().then (data) ->
-      # $scope.posts = data
-      $scope.initializeNewPost()
-      # console.log 'posts', $scope.posts
+   $scope.nextPage()
+   $scope.initializeNewPost()
 
    $scope.savePost = ->
       Post.save $scope.newPost,
