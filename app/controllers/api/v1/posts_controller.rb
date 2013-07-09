@@ -2,7 +2,7 @@ class Api::V1::PostsController < ApplicationController
    respond_to :json
 
    def index
-      @posts = Post.order_by(:id => :desc).page(params[:page]).per(15)
+      @posts = Post.order_by(:id => :desc).page(params[:page]).per(10)
       respond_with @posts
    end
 

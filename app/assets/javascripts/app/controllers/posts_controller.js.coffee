@@ -1,4 +1,4 @@
-@inspire.controller "PostsController", ($scope, Post, postService) ->
+@inspire.controller "PostsController", ($scope, Post, $http, postService) ->
 
    $scope.options = ['I wish', 'I want', 'I miss']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!']
@@ -26,10 +26,21 @@
    $scope.$watch "chosen", ->
       $scope.newPost.prepend = $scope.chosen.prompt
 
-   postService.async().then (data) ->
-      $scope.posts = data
-      $scope.initializeNewPost()
-      # console.log 'posts', $scope.posts
+   $scope.posts = []
+   $scope.loading = false
+   $scope.page = 1
+
+   $scope.nextPage = ->
+      return if $scope.loading
+      $scope.loading = true
+      url = "api/v1/posts.json?page=" + $scope.page
+      $http.get(url).success (data) ->
+         $scope.posts = $scope.posts.concat(data);
+         $scope.loading = false
+         $scope.page = $scope.page + 1
+
+   $scope.nextPage()
+   $scope.initializeNewPost()
 
    $scope.savePost = ->
       Post.save $scope.newPost,
