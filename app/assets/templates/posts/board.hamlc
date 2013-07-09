@@ -12,7 +12,8 @@
 .color_container
    .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color}}"}
 
-%input{:type => "text", :'ng-model' => 'searchFilter'}
+.search
+   %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
 
 %div{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
    / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
