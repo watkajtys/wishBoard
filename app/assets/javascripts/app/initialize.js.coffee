@@ -1,4 +1,4 @@
-@inspire = angular.module('inspire', ['ngResource', 'infinite-scroll'])
+@inspire = angular.module('inspire', ['ngResource'])
 
 @inspire.directive "whenScrolled", ->
    (scope, elm, attr) ->
