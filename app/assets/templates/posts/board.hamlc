@@ -9,10 +9,9 @@
 .div
    %button{:'ng-click' => "savePost()"} Post to Wall
 
-.post_container
+%div{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
    / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
-   %div.post{:'ng-repeat' => 'post in posts', :'ng-class' => '{new: post.isNew}' }
-      %h2
+   %div.post_container
+      %h2.post{:'ng-repeat' => 'post in posts', :'ng-class' => '{new: post.isNew}' }
          %span{:class => "prepend"} {{post.prepend}}
          %span{:class => "entry", :style => "color: {{post.color}}"} {{post.entry}}
-   %button.control{:'ng-click' => 'nextPage()'}Load More
