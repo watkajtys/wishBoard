@@ -3,6 +3,7 @@
    $scope.options = ['I wish', 'I want', 'I miss', 'I love']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
    $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
+   $scope.searchFilter = '';
 
    $scope.pickColor = (color) ->
       $scope.chosenColor = color
