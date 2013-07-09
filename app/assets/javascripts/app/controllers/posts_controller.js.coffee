@@ -1,7 +1,7 @@
 @inspire.controller "PostsController", ($scope, Post, $http, postService) ->
 
-   $scope.options = ['I wish', 'I want', 'I miss']
-   $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!']
+   $scope.options = ['I wish', 'I want', 'I miss', 'I love']
+   $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
    $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
 
    $scope.pickColor = (color) ->
@@ -20,7 +20,7 @@
       $scope.chosen = {prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice]}
 
    $scope.selectPrompt = ->
-      $scope.choice = Math.floor(Math.random()*3)
+      $scope.choice = Math.floor(Math.random()*4)
       $scope.chosen = {prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice]}
 
    $scope.initializeNewPost = ->
