@@ -2,6 +2,11 @@
 
    $scope.options = ['I wish', 'I want', 'I miss']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!']
+   $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
+
+   $scope.pickColor = (color) ->
+      $scope.chosenColor = color
+      $scope.newPost.color = $scope.chosenColor
 
    $scope.iteratePrompt = (math) ->
       max = $scope.options.length - 1
