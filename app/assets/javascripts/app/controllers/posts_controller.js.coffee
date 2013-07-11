@@ -2,11 +2,32 @@
 
    $scope.options = ['I wish', 'I want', 'I miss', 'I love']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
+   $scope.fonts = ['Coming Soon', 'Just Another Hand', 'Sue Ellen Francisco', 'Neucha', 'The Girl Next Door', 'Reenie Beanie', 'Schoolbell', 'Gloria Hallelujah', 'Rock Salt', 'Nothing You Could Do', 'Amatic SC', 'Loved by the King', 'Covered By Your Grace', 'Annie Use Your Telescope', 'Homemade Apple']
    $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
+   $scope.searchFilter = '';
+
+   # $scope.pickFont = (font) ->
+   #    $scope.newPost.font = $scope.chosenFont
+
+   $scope.selectFont = ->
+      $scope.fontChoice = Math.floor(Math.random()* 14)
+      $scope.chosenFont = $scope.fonts[$scope.fontChoice]
+      $scope.newPost.font = $scope.chosenFont
 
    $scope.pickColor = (color) ->
       $scope.chosenColor = color
       $scope.newPost.color = $scope.chosenColor
+
+   $scope.iterateFont = (math) -> 
+      max = $scope.fonts.length - 1
+      if math == 'up'
+         $scope.fontChoice = $scope.fontChoice + 1
+         $scope.fontChoice = 0 if $scope.fontChoice > max
+      else
+         $scope.fontChoice = $scope.fontChoice - 1
+         $scope.fontChoice = 0 if $scope.fontChoice > max
+         $scope.fontChoice = max if $scope.fontChoice < 0
+      $scope.chosen = { prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice], font: $scope.fonts[$scope.fontChoice] }
 
    $scope.iteratePrompt = (math) ->
       max = $scope.options.length - 1
@@ -17,7 +38,7 @@
          $scope.choice = $scope.choice - 1
          $scope.choice = 0 if $scope.choice > max
          $scope.choice = max if $scope.choice < 0
-      $scope.chosen = {prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice]}
+      $scope.chosen = { prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice], font: $scope.fonts[$scope.fontChoice] }
 
    $scope.selectPrompt = ->
       $scope.choice = Math.floor(Math.random()*4)
@@ -26,10 +47,15 @@
    $scope.initializeNewPost = ->
       $scope.selectPrompt()
       $scope.newPost = { isNew: true, prepend: $scope.chosen.prompt }
+      $scope.selectFont() 
       $scope.posts.unshift $scope.newPost
 
    $scope.$watch "chosen", ->
       $scope.newPost.prepend = $scope.chosen.prompt
+      console.log $scope.chosen.font
+      $scope.newPost.font = $scope.chosen.font
+      
+
 
    $scope.posts = []
    $scope.loading = false
