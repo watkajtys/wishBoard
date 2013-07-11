@@ -7,10 +7,8 @@
 
 .font_container
    %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
-   %h1{:class => 'font', :style => 'font-family: {{chosenFont}}'} Font
+   %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
    %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
-
-%h1{:style => 'font-family: {{chosen.Font}}; color: {{chosenColor}}'} Test
 
 .div
    %button{:'ng-click' => "savePost()"} Post to Wall
