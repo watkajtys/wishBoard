@@ -1,7 +1,7 @@
 body {
    background-image: url('dark_wall.png');
    color: #F3F2F2;
-   font-family: 'Indie Flower', cursive;
+   font-family: 'Coming Soon', cursive;
 }
 
 .post.new {
@@ -22,6 +22,16 @@ body {
    font-style: bold;
    margin-left: 20px;
    font-family: 'Abel', sans-serif;
+   text-transform: uppercase;
+   width: 145px;
+}
+
+.font {
+   display: inline-block;
+   float: left;
+   font-size: 3.25em;
+   font-style: bold;
+   margin-left: 20px;
    text-transform: uppercase;
    width: 145px;
 }
@@ -97,7 +107,7 @@ input[type=text] {
    letter-spacing: 2.5px;
    color: #f3f2f2;
    width: 550px;
-   font-family: 'Indie Flower', cursive;
+   /*font-family: 'Indie Flower', cursive;*/
    padding-left: 10px;
 }
 

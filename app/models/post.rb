@@ -5,6 +5,7 @@ class Post
    field :entry
    field :color, :default => "#f3f2f2"
    field :tweeted, :default => false
+   field :font, :default => "Coming Soon"
 
    validates_inclusion_of :tweeted, in: [true, false]
    validates_presence_of :tweeted
