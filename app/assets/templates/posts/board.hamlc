@@ -3,8 +3,14 @@
    %h1{:class => 'prompt'} {{chosen.prompt}}
    %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
-/ %input{:type => "text", :'ng-model' => 'newPost.prepend', :placeholder => '{{prepend.key}}', :value => '{{prepend.key}}' }
-%input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosenColor}}"}
+%input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosenColor}}; font-family: {{chosen.font}}"}
+
+.font_container
+   %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
+   %h1{:class => 'font', :style => 'font-family: {{chosenFont}}'} Font
+   %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
+
+%h1{:style => 'font-family: {{chosen.Font}}; color: {{chosenColor}}'} Test
 
 .div
    %button{:'ng-click' => "savePost()"} Post to Wall
@@ -20,4 +26,4 @@
    %div.post_container
       %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-class' => '{new: post.isNew}' }
          %span{:class => "prepend"} {{post.prepend}}
-         %span{:class => "entry", :style => "color: {{post.color}}"} {{post.entry}}
+         %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
