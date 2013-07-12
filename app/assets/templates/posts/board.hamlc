@@ -1,27 +1,27 @@
-.prompt_container
-   %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
-   %h1{:class => 'prompt'} {{chosen.prompt}}
-   %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
+.header
+   .prompt_container
+      %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
+      %h1{:class => 'prompt'} {{chosen.prompt}}
+      %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
-%input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosenColor}}; font-family: {{chosen.font}}"}
+   %input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosenColor}}; font-family: {{chosen.font}}"}
 
-.font_container
-   %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
-   %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
-   %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
+   .font_container
+      %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
+      %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
+      %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
-.div
-   %button{:'ng-click' => "savePost()"} Post to Wall
+   .div
+      %button{:'ng-click' => "savePost()"} Post to Wall
 
-.color_container
-   .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color}}"}
+   .color_container
+      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color}}"}
 
-.search
-   %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
+   .search
+      %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
 
-%div{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
-   / %span{:class => "entry", :style => "color: {{post.color}}"} {{newPost.entry}}
-   %div.post_container
-      %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-class' => '{new: post.isNew}' }
-         %span{:class => "prepend"} {{post.prepend}}
-         %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
+
+%div.post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
+   %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-class' => '{new: post.isNew}' }
+      %span{:class => "prepend"} {{post.prepend}}
+      %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}

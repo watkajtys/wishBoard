@@ -8,6 +8,47 @@ body {
    opacity: 0.5;
 }
 
+.prepend {
+   position: relative;
+   text-decoration: none;
+   font-family: 'Abel', sans-serif;
+   text-transform: uppercase;
+   font-size: 4em;
+   font-weight: bolder; 
+   text-decoration: none;
+   letter-spacing: 1px;
+}
+
+.prepend h2 {
+   text-align: justify;
+}
+
+.prepend:after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 9px;
+    border-bottom: solid 3px;
+    width: 100%; 
+ }
+
+.entry {
+   font-size: 3.5em;
+   margin-left: 10px;
+   opacity: 0.90;
+   letter-spacing: 2.5px;
+   line-height: 1px;
+}
+
+#fixed {
+   margin-top: 0px;
+   height: 100%;
+   overflow: auto;
+}
+
+
+/*
 
 .left {
    display: inline-block;
@@ -107,7 +148,6 @@ input[type=text] {
    letter-spacing: 2.5px;
    color: #f3f2f2;
    width: 550px;
-   /*font-family: 'Indie Flower', cursive;*/
    padding-left: 10px;
 }
 
@@ -135,195 +175,4 @@ input[type=submit]:hover{
    overflow: auto;
 }
 
-@media screen and (max-width: 1120px) {
-   
-   .prompt_container {
-      position: relative;
-      width: 100%;
-   }
-
-   .form {
-      position: absolute;
-      left: 33px;
-      top: 90px;
-      width: 500px;
-   }
-
-   .post_container {
-      position: relative;
-      top: 150px;
-   }
-
-   input[type=text] {
-      position: relative;
-      width: 668px;
-      left: 150px;
-   }
-
-   .color_container {
-      position: relative;
-      left: 150px;
-      width: 700px;
-   }
-
-   .picker {
-      width: 89px;
-   }
-
-   input[type=submit] {
-      width: 685px;
-      left: 150px;
-   }
-}
-
-@media screen and (max-width: 980px) {
-   
-   .prompt_container {
-      margin-left: 20px;
-   }
-
-   .post {
-      font-size: .85em;
-   }
-
-   .post_container {
-      position: relative;
-      top: 150px;
-      padding-left: 211px;
-      text-indent:-160px;
-   }
-
-   .form {
-      position: absolute;
-      left: -117px;
-   }
-
-   input[type=text] {
-      position: relative;
-      width: 650px;
-      right: 300px;
-   }
-
-   .color_container {
-      position: relative;
-      width: 675px;
-   }
-
-   .picker {
-      width: 86.4px;
-   }
-
-   input[type=submit] {
-      width: 665px;
-   }
-}
-
-@media screen and (max-width: 810px) {
-   .prompt_container {
-      margin-left: 20px;
-      font-size: .85em;
-   }
-
-   .post {
-      font-size: .70em;
-   }
-
-   .post_container {
-      position: relative;
-      top: 200px;
-      padding-left: 195px;
-      text-indent:-135px;
-   }
-
-   .form {
-      position: absolute;
-      left: -117px;
-   }
-
-   input[type=text] {
-      position: relative;
-      width: 400px;
-      right: 300px;
-      font-size: 2em;
-   }
-
-   .color_container {
-      position: relative;
-      width: 430px;
-   }
-
-   .picker {
-      width: 50.9px;
-      height: 50px;
-   }
-
-   input[type=submit] {
-      width: 416px;
-      height: 50px;
-   }
-}
-
-@media screen and (max-width: 491px) {
-
-   .intro {
-      position: absolute;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      margin-bottom: 0px;
-      right: 100px;
-      opacity: .5;
-   }
-
-   .intro:hover {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      width: 80%;
-      height: 100px;
-      right: 5px;
-   }
-
-   .prompt_container {
-      margin-left: 20px;
-      font-size: .85em;
-      padding-top: 70px;
-   }
-
-   .post {
-      font-size: .5em;
-   }
-
-   .post_container {
-      position: relative;
-      top: 155px;
-      padding-left: 162px;
-      text-indent:-110px;
-   }
-
-   .form {
-      position: absolute;
-      left: -117px;
-      top: 145px;
-   }
-
-   input[type=text] {
-      position: relative;
-      width: 400px;
-      right: 300px;
-      font-size: 2em;
-   }
-
-   .color_container {
-      position: relative;
-      width: 430px;
-   }
-
-   .picker {
-      width: 50.9px;
-      height: 50px;
-   }
-
-   input[type=submit] {
-      width: 415px;
-      height: 50px;
-   }
-}
+*/
