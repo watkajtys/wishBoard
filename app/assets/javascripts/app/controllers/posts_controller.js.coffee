@@ -2,17 +2,12 @@
 
    $scope.options = ['I wish', 'I want', 'I miss', 'I love']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
-   $scope.fonts = ['Coming Soon', 'Just Another Hand', 'Sue Ellen Francisco', 'Neucha', 'The Girl Next Door', 'Reenie Beanie', 'Schoolbell', 'Gloria Hallelujah', 'Rock Salt', 'Nothing You Could Do', 'Amatic SC', 'Loved by the King', 'Covered By Your Grace', 'Annie Use Your Telescope', 'Homemade Apple']
+   $scope.fonts = ['Coming Soon', 'Sue Ellen Francisco', 'Neucha', 'Schoolbell', 'Loved by the King', 'Annie Use Your Telescope']
    $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
    $scope.searchFilter = '';
 
    # $scope.pickFont = (font) ->
    #    $scope.newPost.font = $scope.chosenFont
-
-   $scope.selectFont = ->
-      $scope.fontChoice = Math.floor(Math.random()* 14)
-      $scope.chosenFont = $scope.fonts[$scope.fontChoice]
-      $scope.newPost.font = $scope.chosenFont
 
    $scope.pickColor = (color) ->
       $scope.chosenColor = color
@@ -43,6 +38,11 @@
    $scope.selectPrompt = ->
       $scope.choice = Math.floor(Math.random()*4)
       $scope.chosen = {prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice]}
+
+   $scope.selectFont = ->
+      $scope.fontChoice = Math.floor(Math.random()* 7)
+      $scope.chosen = {prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice], font: $scope.fonts[$scope.fontChoice]}
+      $scope.newPost.font = $scope.chosenFont
 
    $scope.initializeNewPost = ->
       $scope.selectPrompt()
