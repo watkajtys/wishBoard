@@ -1,6 +1,8 @@
 body {
    background-image: url('dark_wall.png');
    color: #F3F2F2;
+   height: 100%
+   /*overflow: hidden;*/
    font-family: 'Coming Soon', cursive;
 }
 
@@ -76,9 +78,7 @@ input[type=text] {
 .post_container {
    /*clear: both;*/
    text-align: left;
-   width: 75%;
-   padding-left: 190px;
-   text-indent: -180px;
+   width: 100%;
    letter-spacing: 1px;
 }
 
@@ -117,13 +117,13 @@ input[type=text] {
    margin-left: 10px;
    opacity: 0.90;
    letter-spacing: 2.5px;
-   line-height: 1.25em;
+   line-height: 1.5em;
 }
 
 #fixed {
    margin-top: 0px;
-   height: 100%;
-   overflow: auto;
+   height: 70%;
+   overflow: scroll;
 }
 
 
