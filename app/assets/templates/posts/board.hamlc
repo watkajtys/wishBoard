@@ -11,17 +11,17 @@
       %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
-   .div
-      %button{:'ng-click' => "savePost()"} Post to Wall
-
    .color_container
       .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color}}"}
+
+   .div
+      %button{:'ng-click' => "savePost()"} Post to Wall
 
    .search
       %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
 
-
-%div.post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
-   %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-class' => '{new: post.isNew}' }
-      %span{:class => "prepend"} {{post.prepend}}
-      %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
+.posts
+   .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
+      %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-class' => '{new: post.isNew}' }
+         %span{:class => "prepend"} {{post.prepend}}
+         %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
