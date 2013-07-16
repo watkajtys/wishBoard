@@ -1,0 +1,24 @@
+.animate-enter, 
+.animate-leave { 
+    
+    display: block;
+} 
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    -webkit-transition:.75s ease all;
+    -moz-transition:.75s ease all;
+    -o-transition:.75s ease all;
+    transition:.75s ease all;
+
+}        
+ 
+.animate-enter.animate-enter-active,
+.animate-leave {
+    opacity: 1;
+    -webkit-transition:.75s ease all;
+    -moz-transition:.75s ease all;
+    -o-transition:.75s ease all;
+    transition:.75s ease all;
+}
