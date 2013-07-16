@@ -14,6 +14,10 @@
       .otherwise({templateUrl: "Page not found. Something got fucked up."})
 )
 
+@inspire.config ["$httpProvider", ($httpProvider) ->
+  $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
+]
+
 @inspire.run(['$window', '$templateCache', ($window, $templateCache) -> 
    $templateCache.put(name, templateFunction) for name, templateFunction of $window.JST
 ])
