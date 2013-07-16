@@ -46,6 +46,7 @@
 
    $scope.initializeNewPost = ->
       $scope.selectPrompt()
+      $scope.chosenColor = '#f3f2f2'
       $scope.newPost = { isNew: true, prepend: $scope.chosen.prompt }
       $scope.selectFont() 
       $scope.posts.unshift $scope.newPost
