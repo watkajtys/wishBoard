@@ -1,4 +1,4 @@
-@inspire.controller "PostsController", ($scope, Post, $http, postService) ->
+@inspire.controller "PostsController", ($scope, Post, $http) ->
 
    $scope.options = ['I wish', 'I want', 'I miss', 'I love']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
@@ -47,6 +47,8 @@
    $scope.initializeNewPost = ->
       $scope.selectPrompt()
       $scope.chosenColor = '#f3f2f2'
+      $scope.chosen = { font: $scope.fonts[$scope.fontChoice] }
+      console.log 'initialize', $scope.fontChoice
       $scope.newPost = { isNew: true, prepend: $scope.chosen.prompt }
       $scope.selectFont() 
       $scope.posts.unshift $scope.newPost
@@ -75,10 +77,12 @@
    $scope.initializeNewPost()
 
    $scope.savePost = ->
+      console.log $scope.newPost
       Post.save $scope.newPost,
          (data) ->
             # $scope.posts.unshift $scope.newPost # appending
             $scope.newPost.isNew = false
+            console.log data
             $scope.initializeNewPost()
          (response) ->
             $scope.errors = response.data.errors
