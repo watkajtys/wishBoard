@@ -13,6 +13,8 @@ gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'twitter'
 gem 'oauth'
+gem 'haml_coffee_assets'
+gem 'execjs'
 
 gem "haml", "~> 4.0.2"
 
