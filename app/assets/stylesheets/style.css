@@ -77,14 +77,26 @@ input[type=text] {
 
 .post_container {
    /*clear: both;*/
-   text-align: left;
+   /*text-align: left;*/
    width: 100%;
-   letter-spacing: 1px;
+   margin-left: 10px;
+   margin-right: 10px;
+   /*letter-spacing: 1px;*/
 }
 
 .post.new {
    opacity: 0.5;
-   margin-top: 10px;
+   background-color: rgba(89,82,82,.35);
+}
+
+.post {
+   width: 30%;
+   min-width: 420px;
+   min-height: 420px;
+   display: inline-table;
+   clear: both;
+   margin: 10px 10px 10px 10px;
+   padding: 10px 10px 10px 10px;
 }
 
 .prepend {
@@ -95,11 +107,9 @@ input[type=text] {
    font-size: 4em;
    font-weight: bolder; 
    text-decoration: none;
-   letter-spacing: 1px;
-}
-
-.prepend h2 {
-   text-align: justify;
+   /*letter-spacing: 1px;*/
+   clear: both;
+   text-align: center;
 }
 
 .prepend:after{
@@ -109,20 +119,21 @@ input[type=text] {
     right:0;
     bottom: 9px;
     border-bottom: solid 3px;
-    width: 98%; 
+    width: 98%;
  }
 
 .entry {
-   font-size: 3.5em;
+   font-size: 3em;
    margin-left: 10px;
-   opacity: 0.90;
+   /*opacity: 0.90;*/
    letter-spacing: 2.5px;
-   line-height: 1.5em;
+   /*line-height: 1.5em;*/
+   /*clear: both;*/
 }
 
 #fixed {
    margin-top: 0px;
-   height: 70%;
+   height: 75%;
    overflow: scroll;
 }
 
