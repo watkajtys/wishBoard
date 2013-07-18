@@ -5,7 +5,7 @@
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
    %form{:"ng-submit" => "savePost()"}
-      %input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosenColor}}; font-family: {{chosen.font}}"}
+      %input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
       %button Post to Wall
 
    .font_container
@@ -14,7 +14,7 @@
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
    .color_container
-      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.chosen}}"}
+      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
 
    .search
       %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
