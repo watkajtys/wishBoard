@@ -3,15 +3,18 @@
    $scope.options = ['I wish', 'I want', 'I miss', 'I love']
    $scope.placeholders = ['upon a star...', 'to travel the world!', 'swinging!', 'thunderstorms!']
    $scope.fonts = ['Coming Soon', 'Sue Ellen Francisco', 'Neucha', 'Schoolbell', 'Loved by the King', 'Annie Use Your Telescope']
-   $scope.colors = ['#f3f2f2','#f5989d', '#fff799', '#bd8cbf', '#fdbd89', '#79bcde', '#82ca89']
+   $scope.colors = [{chosen: '#f3f2f2', background: '89,82,82'}, {chosen: '#f5989d', background: '152,204,245'}, {chosen: '#fff799', background: '153,212,255'}, {chosen: '#bd8cbf', background: '140,191,189'}, {chosen: '#fdbd89', background: '186,135,253'}, {chosen: '#79bcde', background: '188,221,120'}, {chosen: '#82ca89', background: '201,130,196'}]
    $scope.searchFilter = '';
 
    # $scope.pickFont = (font) ->
    #    $scope.newPost.font = $scope.chosenFont
 
    $scope.pickColor = (color) ->
-      $scope.chosenColor = color
+      $scope.chosenColor = color.chosen
+      $scope.chosenBackground = color.background
+      console.log color
       $scope.newPost.color = $scope.chosenColor
+      $scope.newPost.background = $scope.chosenBackground
 
    $scope.iterateFont = (math) -> 
       max = $scope.fonts.length - 1

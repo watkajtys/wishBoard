@@ -14,13 +14,13 @@
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
    .color_container
-      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color}}"}
+      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.chosen}}"}
 
    .search
       %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
 
 .posts
    .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()'}
-      %h2.post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-animate' => " 'animate' ", :'ng-class' => '{new: post.isNew}' }
+      .post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-animate' => " 'animate' ", :'ng-class' => '{new: post.isNew}', :style => "background-color: rgba({{post.background}},.4)" }
          %span{:class => "prepend"} {{post.prepend}}
          %span{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
