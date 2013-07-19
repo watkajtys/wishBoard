@@ -1,4 +1,6 @@
-.header
+.headerfill{:'ng-show' => 'headerHide', :'ng-animate' => " 'shrink' ", :class => 'placeholder' }
+   %h2 Sup
+.header{:'ng-hide' => 'headerHide', :'ng-animate' => " 'slide' " }
    .prompt_container
       %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
       %h1{:class => 'prompt'} {{chosen.prompt}}
@@ -18,6 +20,8 @@
 
    .search
       %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
+
+%button{:'ng-click' => "headerToggle(headerHide)"}Hide
 
 .posts
    .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()'}

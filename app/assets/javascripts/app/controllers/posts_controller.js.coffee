@@ -8,6 +8,11 @@
    $scope.fontColorChoice = $scope.colors[0].font
    $scope.backgroundColorChoice = $scope.colors[0].background
 
+   
+   $scope.headerHide = false
+   $scope.headerToggle = (headerHide) ->
+      $scope.headerHide = !headerHide
+
    $scope.pickColor = (color) ->
       $scope.fontColorChoice = color.font
       $scope.backgroundColorChoice = color.background
