@@ -25,10 +25,10 @@
 /*SLIDE ANIMATIONS*/
 
 .slide-hide, .slide-show {
-    -webkit-transition:all ease 1.5s;
-    -moz-transition:all ease 1.5s;
-    -o-transition:all ease 1.5s;
-    transition:all ease 1.5s;
+    -webkit-transition:all ease-in-out 1.5s;
+    -moz-transition:all ease-in-out 1.5s;
+    -o-transition:all ease-in-out 1.5s;
+    transition:all ease-in-out 1.5s;
 }
 .slide-hide {
     position: absolute;
@@ -50,10 +50,10 @@
 /*SHRINK ANIMATIONS*/
 
 .shrink-hide, .shrink-show {
-    -webkit-transition:all ease 1.5s;
-    -moz-transition:all ease 1.5s;
-    -o-transition:all ease 1.5s;
-    transition:all ease 1.5s;
+    -webkit-transition:all ease-in-out 1.5s;
+    -moz-transition:all ease-in-out 1.5s;
+    -o-transition:all ease-in-out 1.5s;
+    transition:all ease-in-out 1.5s;
 }
 .placeholder.shrink-hide {
     position: relative;*/
