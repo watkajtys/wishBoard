@@ -76,10 +76,9 @@ body {
    font-style: bold;
    margin-left: 10%;
    height: 100px;
-   /*margin-right: 10%;*/
    font-family: 'Abel', sans-serif;
    text-transform: uppercase;
-   width: 50%;
+   width: 55%;
 }
 
 .font_container {
@@ -135,7 +134,7 @@ input[type=text] {
 
 .submit {
    position: absolute;
-   top: 160px;
+   top: 160%;
    width: 100%;
    height: 50px;
 
@@ -155,7 +154,7 @@ input[type=text] {
    position: absolute;
    width: 37%;
    left: 30%;
-   top: 140px;
+   top: 55%;
 }
 
 .picker {
@@ -168,12 +167,13 @@ input[type=text] {
 
 .search {
    position: absolute; 
-   top: 180px;
-   right: 20px;
+   top: 74%;
+   width: 25%;
+   right: 2%;
 }
 
 .search input[type=text] {
-   width: 350px;
+   width: 100%;
    line-height: 50px;
    height: 50px;
    font-size: 1.5em;
@@ -184,9 +184,9 @@ input[type=text] {
 .hide {
    position: absolute; 
    height: 50px;
-   top: 180px;
-   left: 20px;
-   width: 120px;
+   top: 74%;
+   left: 2%;
+   width: 25%;
    padding: 0px;
 }
 
@@ -253,7 +253,31 @@ input[type=text] {
    overflow: scroll;
 }
 
+.footer {
+   display: none;
+}
 
-@media (max-width: 600px) {
-   .
+
+@media (max-height: 700px) {
+   .header {
+      display: none;
+   }
+
+   #fixed {
+      height: 90%;
+   }
+
+   .footer {
+      display: inline-block;
+      width: 100%;
+      height: 10%;
+      background-color: red;
+   }
+
+   .footer_menu {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      background-color: blue;
+   }
 }
