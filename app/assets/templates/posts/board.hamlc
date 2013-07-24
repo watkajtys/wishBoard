@@ -33,10 +33,10 @@
 .footer_menu{:'ng-show' => "footerShow" }
    .mobile_prompt_container
       %i{:class => "icon-double-angle-up icon-4x up", :'ng-click' => "iteratePrompt('down')"}
-      %h1{:class => 'prompt'} {{chosen.prompt}}
+      %h1{:class => 'mobile_prompt'} {{chosen.prompt}}
       %i{:class => "icon-double-angle-down icon-4x down", :'ng-click' => "iteratePrompt('up')"}
 
-   %form{:"ng-submit" => "savePost()", :class => "input"}
+   %form{:"ng-submit" => "savePost()", :class => "mobile_input"}
       %input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
       %button{:class => 'submit'} Post to Wall
 
@@ -46,7 +46,7 @@
       %i{:class => "icon-double-angle-down icon-4x down", :'ng-click' => "iterateFont('up')"}
 
    .mobile_color_container
-      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
+      .mobile_picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
 
    .mobile_post{:'ng-class' => '{new: posts[0].isNew}', :style => "background-color: rgba({{posts[0].background}},.35)" }
       %h2{:class => "prepend"} {{posts[0].prepend}}

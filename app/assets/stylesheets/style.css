@@ -38,7 +38,7 @@ body {
    font-family: Abel;
    font-size: 1.5em;
    font-weight:bolder;
-   padding: 1% 15%;
+   /*padding: 1% 15%;*/
    text-decoration:none;
 
    text-shadow:0px 1px 0px #3d768a;
@@ -288,6 +288,7 @@ input[type=text] {
       width: 90%;
       height: 80%;
       margin: 0px;
+      vertical-align: center;
    }
 
    .mobile_search {
@@ -311,7 +312,7 @@ input[type=text] {
 
    .up {
       display: inline-block;
-      clear: both;
+      float: left;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -321,8 +322,10 @@ input[type=text] {
    }
 
    .down {
+      position: absolute;
       display: inline-block;
-      clear: both;
+      /*clear: both;*/
+      float: left;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -332,7 +335,53 @@ input[type=text] {
    }
 
    .mobile_prompt_container {
+      position: absolute;
+      top: 0px;
+      left: 2%;
+      top: 2%;
+      width: 30%;
+   }
 
+   .mobile_prompt {
+      display: inline-block;
+      float: left;
+      font-size: 3.25em;
+      font-style: bold;
+      margin-left: 10%;
+      height: 100px;
+      font-family: 'Abel', sans-serif;
+      text-transform: uppercase;
+      width: 55%;
+   }
+
+   .mobile_font_container {
+      position: absolute;
+      top: 0px;
+      left: 2%;
+      top: 15%;
+      width: 30%;
+   }
+
+   .mobile_color_container {
+      position: absolute;
+      width: 30%;
+      right: 0%;
+      top: 3%;
+   }
+
+   .mobile_picker {
+      display: inline-block;
+      float: left;
+      margin: 1% 1% 1% 1%;
+      height: 75px;
+      width: 20%;
+   }
+
+   .mobile_input {
+      position: absolute;
+      top: 3.25%;
+      left: 33%;
+      width: 34%;
    }
 
    .footer_menu {
