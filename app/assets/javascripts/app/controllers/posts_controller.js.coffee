@@ -84,6 +84,7 @@
          (data) ->
             # $scope.posts.unshift $scope.newPost # appending
             $scope.newPost.isNew = false
+            $scope.footerShow = false
             console.log data
             $scope.initializeNewPost()
          (response) ->
