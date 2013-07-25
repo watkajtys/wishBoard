@@ -258,6 +258,20 @@ input[type=text] {
    display: none;
 }
 
+/***Validations***/
+
+.ng-dirty.ng-invalid {
+  border-color:#ec3f41;
+}
+
+.error {
+   background-color: #ec3f41;
+   font-family: 'Abel', sans-serif;
+   padding: 1%;
+   position: relative;
+   right: 90%;
+   top: 90px;
+}
 
 @media (max-height: 700px), (max-width: 980px) {
    .header {
