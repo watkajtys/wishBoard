@@ -266,9 +266,10 @@ input[type=text] {
    font-family: 'Abel', sans-serif;
    padding: 1%;
    position: relative;
-   right: 53%;
-   width: 82%;
+   right: 11%;
+   width: 128%;
    top: 90px;
+   font-size: 1.5em;
 }
 
 @media (max-height: 700px), (max-width: 980px) {
@@ -373,15 +374,19 @@ input[type=text] {
    .mobile_font_container {
       position: absolute;
       left: 2%;
-      top: 19%;
+      top: 160px;
       width: 27%;
+   }
+
+   .font {
+      margin-right: 16%;
    }
 
    .mobile_color_container {
       position: absolute;
-      width: 60%;
+      width: 59.4%;
       right: 4%;
-      top: 19%;
+      top: 150px;
    }
 
    .mobile_picker {
@@ -395,34 +400,31 @@ input[type=text] {
    .mobile_input {
       position: relative;
       top: 3.25%;
-      left: 73%;
-      width: 68%;
+      left: 42%;
+      width: 44%;
    }
-
+ 
    .mobile_input input[type=text] {
       position: absolute;
-      right: 69%;
+      right: -19%;
       background: rgba(54, 54, 54, 0.6);
       font-size: 2.5em;
       letter-spacing: 2.5px;
       color: #f3f2f2;
-      width: 84%;
+      width: 130%;
       line-height: 90px;
       height: 90px;
       padding-left: 10px;
    }
-
+ 
    .mobile_input .submit {
       position: absolute;
-      top: 250px;
-      left: -90%;
-      width: 100%;
+      margin-top: 6%;
+      top: 200px;
+      right: 0%;
+      width: 160%;
       height: 50px;
       text-transform: uppercase;
-      font-family: Abel;
-      font-size: 1.5em;
-      font-weight: bolder;
-      text-decoration: none;
    }
 
    .footer_menu {
@@ -435,7 +437,8 @@ input[type=text] {
 
    .mobile_post {
       position: absolute;
-      top: 40%;
+      top: 43%;
+      left: 31%;
       width: 30%;
       min-width: 350px;
       min-height: 350px;

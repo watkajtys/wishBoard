@@ -31,11 +31,6 @@
          %h2{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
 
 .footer_menu{:'ng-show' => "footerShow" }
-   
-   %form{:"ng-submit" => "savePost()", :name => 'mobile_input', :class => "mobile_input"}
-      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
-      .mobile_error{:'ng-show' => "mobile_input.entry.$error.maxlength"}You have used too many characters! Delete a few!
-      %button{:type => 'submit', :class => 'submit'} Post to Wall
 
    .mobile_prompt_container
       %i{:class => "icon-double-angle-up icon-4x up", :'ng-click' => "iteratePrompt('down')"}
@@ -47,6 +42,11 @@
       %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
       %i{:class => "icon-double-angle-down icon-4x down", :'ng-click' => "iterateFont('up')"}
 
+   %form{:"ng-submit" => "savePost()", :name => 'mobile_input', :class => "mobile_input"}
+      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+      .mobile_error{:'ng-show' => "mobile_input.entry.$error.maxlength"}You have used too many characters! Delete a few!
+      %button{:type => 'submit', :class => 'submit'} Post to Wall
+      
    .mobile_color_container
       .mobile_picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
 
