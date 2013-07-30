@@ -444,7 +444,7 @@ input[type=text] {
       display: inline-block;
       height: 92%;
       width: 100%;
-      background-image: url('dark_wall.png');
+      background-image: url('../dark_wall.png');
       text-align: center;
    }
 
