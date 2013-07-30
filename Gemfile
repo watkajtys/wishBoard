@@ -10,7 +10,6 @@ gem 'mongoid'
 gem 'bson_ext'
 gem "font-awesome-rails"
 gem 'kaminari'
-gem 'newrelic_rpm'
 gem 'twitter'
 gem 'oauth'
 gem 'haml_coffee_assets'
@@ -51,6 +50,10 @@ group :test do
     gem "capybara-webkit"
     gem 'ruby-prof'
     gem 'pry-rails'
+end
+
+group :production do
+  gem 'newrelic_rpm'
 end
 
 # To use ActiveModel has_secure_password

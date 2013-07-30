@@ -13,6 +13,11 @@
    $scope.headerToggle = (headerHide) ->
       $scope.headerHide = !headerHide
 
+   $scope.footerShow = false
+   $scope.footerToggle = (footerShow) ->
+      $scope.footerShow = !footerShow
+      console.log $scope.footerShow
+
    $scope.pickColor = (color) ->
       $scope.fontColorChoice = color.font
       $scope.backgroundColorChoice = color.background
@@ -79,6 +84,7 @@
          (data) ->
             # $scope.posts.unshift $scope.newPost # appending
             $scope.newPost.isNew = false
+            $scope.footerShow = false
             console.log data
             $scope.initializeNewPost()
          (response) ->
