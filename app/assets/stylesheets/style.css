@@ -1,5 +1,5 @@
 body {
-   background-image: url('../dark_wall.png');
+   background-image: url('dark_wall.png');
    color: #F3F2F2;
    height: 100%;
    width: 100%;
@@ -444,7 +444,7 @@ input[type=text] {
       display: inline-block;
       height: 92%;
       width: 100%;
-      background-image: url('../dark_wall.png');
+      background-image: url('dark_wall.png');
       text-align: center;
    }
 
