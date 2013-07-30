@@ -292,6 +292,13 @@ input[type=text] {
 /***Media Queries***/
 
 @media (max-height: 700px), (max-width: 980px) {
+   .expand {
+      -webkit-transition:0s ease-in-out all;
+      -moz-transition:0s ease-in-out all;
+      -o-transition:0s ease-in-out all;
+      transition:0s ease-in-out all;
+   }
+
    .footer_menu {
       display: none;
       width: 100%;
@@ -303,6 +310,10 @@ input[type=text] {
 
    .post_container {
       height: 91%;
+      -webkit-transition:0s ease-in-out all;
+      -moz-transition:0s ease-in-out all;
+      -o-transition:0s ease-in-out all;
+      transition:0s ease-in-out all;
    }
 
    .footer {
