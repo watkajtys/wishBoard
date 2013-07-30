@@ -338,9 +338,9 @@ input[type=text] {
       font-size: 1.5em;
       font-family: 'Abel', sans-serif;
       text-align: center;
-}
+   }
 
-   /*** Menu Objects ***/
+   /*MENU OBJECTS*/
 
    .up {
       display: inline-block;
