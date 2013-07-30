@@ -1,13 +1,14 @@
 Wishboard::Application.routes.draw do
 
-  get "board/index"
+  namespace :api do
+    namespace :v1 do
+      resources :posts
+    end
+  end
 
-  # resources :wishes
+  match '*anything' => "static#start"
+  root :to => "static#start"
 
-  resources :posts
-
-  root :to => "board#index"
-  get "index.json", :to => "board#index"  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

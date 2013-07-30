@@ -1,5 +1,7 @@
 INSPIREBOARD
 ========
+Now in Angular.JS
+------
 
 About
 ------

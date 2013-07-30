@@ -11,5 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require hamlcoffee
 //= require jquery_ujs
-//= require_tree .
+//= require angular
+//= require angular-resource
+
+//= require ./app/initialize
+//= require_tree ./app/services
+//= require_tree ../templates 
+//= require_tree ./app/controllers

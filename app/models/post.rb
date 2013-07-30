@@ -3,12 +3,14 @@ class Post
 
    field :prepend
    field :entry
-   field :color
+   field :color, :default => "#f3f2f2"
    field :tweeted, :default => false
+   field :font, :default => "Coming Soon"
+   field :background, :default => "89,82,82"
 
    validates_inclusion_of :tweeted, in: [true, false]
    validates_presence_of :tweeted
-   validates_inclusion_of :prepend, in: ["I wish", "I want", "I miss"]
+   validates_inclusion_of :prepend, in: ["I wish", "I want", "I miss", "I love"]
    validates_presence_of :entry
    validates :entry, :length => {:in => 3..120}
    validates_presence_of :color

@@ -13,6 +13,10 @@ gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'twitter'
 gem 'oauth'
+gem 'twitter'
+gem 'oauth'
+gem 'haml_coffee_assets'
+gem 'execjs'
 
 gem "haml", "~> 4.0.2"
 
@@ -49,6 +53,10 @@ group :test do
     gem "capybara-webkit"
     gem 'ruby-prof'
     gem 'pry-rails'
+end
+
+group :production do
+  gem 'newrelic_rpm'
 end
 
 # To use ActiveModel has_secure_password

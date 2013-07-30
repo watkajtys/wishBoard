@@ -1,0 +1,81 @@
+.animate-enter, .animate-leave { 
+    
+    display: block;
+} 
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    -webkit-transition:.75s ease all;
+    -moz-transition:.75s ease all;
+    -o-transition:.75s ease all;
+    transition:.75s ease all;
+
+}        
+ 
+.animate-enter.animate-enter-active,
+.animate-leave {
+    opacity: 1;
+    -webkit-transition:.75s ease all;
+    -moz-transition:.75s ease all;
+    -o-transition:.75s ease all;
+    transition:.75s ease all;
+}
+
+/*SLIDE ANIMATIONS*/
+
+.slide-hide, .slide-show {
+    -webkit-transition:all ease-in-out 1.5s;
+    -moz-transition:all ease-in-out 1.5s;
+    -o-transition:all ease-in-out 1.5s;
+    transition:all ease-in-out 1.5s;
+}
+.slide-hide {
+    position: absolute;
+    top: 0;
+}
+.slide-hide.slide-hide-active {
+    position: absolute;
+    top: -30%;
+}
+.slide-show {
+    position: absolute;
+    top: -30%;
+}
+.slide-show.slide-show-active {
+    position: absolute;
+    top: 0px;
+}
+
+/*SHRINK ANIMATIONS*/
+
+.shrink-hide, .shrink-show {
+    -webkit-transition:all ease-in-out 1.5s;
+    -moz-transition:all ease-in-out 1.5s;
+    -o-transition:all ease-in-out 1.5s;
+    transition:all ease-in-out 1.5s;
+}
+.placeholder.shrink-hide {
+    position: relative;*/
+    height: 10%;
+    z-index:-1;
+   /* top: 0;*/
+}
+.placeholder.shrink-hide.shrink-hide-active {
+    height: 28%;
+}
+.placeholder.shrink-show {
+    /*position: absolute;*/
+    /*top: -100px;*/
+    height: 28%;
+}
+
+.placeholder.shrink-show.shrink-show-active {
+    /*position: relative;*/
+    /*top: 0px;*/
+    height: 10%;
+}
+
+/*EXPAND ANIMATIONS*/
+
+.
