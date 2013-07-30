@@ -278,6 +278,11 @@ input[type=text] {
 }
 
 .error {
+   position: absolute;
+   width: 65%;
+   height: 60%;
+   left: 116%;
+   top: 60%;
    background-color: #ec3f41;
    font-family: 'Abel', sans-serif;
    padding: 1%;
@@ -388,7 +393,20 @@ input[type=text] {
       position: absolute;
       left: 2%;
       top: 160px;
-      width: 27%;
+      width: 48%;
+   }
+
+   .mobile_font {
+      display: inline-block;
+      float: left;
+      font-size: 3.25em;
+      font-style: bold;
+      margin-left: 15%;
+      line-height: 100px;
+      height: 100px;
+      text-transform: uppercase;
+      margin-top: -10px;
+      width: 30%;
    }
 
    .font {

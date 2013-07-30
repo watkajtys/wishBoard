@@ -8,7 +8,7 @@
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
    %form{:"ng-submit" => "savePost()", :name => 'input', :class => "input"}
-      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 60, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
       .error{:'ng-show' => "input.entry.$error.maxlength"}You have used too many characters! Delete a few!
       %button{:class => 'submit'} Post to Wall
 
@@ -40,11 +40,11 @@
 
    .mobile_font_container
       %i{:class => "icon-double-angle-up icon-4x up", :'ng-click' => "iterateFont('down')"}
-      %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
+      %h1{:class => 'mobile_font', :style => 'font-family: {{chosen.font}}'} Font
       %i{:class => "icon-double-angle-down icon-4x down", :'ng-click' => "iterateFont('up')"}
 
    %form{:"ng-submit" => "savePost()", :name => 'mobile_input', :class => "mobile_input"}
-      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 60, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
       .mobile_error{:'ng-show' => "mobile_input.entry.$error.maxlength"}You have used too many characters! Delete a few!
       %button{:type => 'submit', :class => 'submit'} Post to Wall
 
