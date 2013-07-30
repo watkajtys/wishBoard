@@ -93,3 +93,5 @@
 
    $scope.initializeNewPost()
    $scope.nextPage()
+
+@inspire.$inject = ["$scope", "$http", "Post"]
