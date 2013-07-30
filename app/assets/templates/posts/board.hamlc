@@ -7,8 +7,9 @@
       %h1{:class => 'prompt'} {{chosen.prompt}}
       %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
-   %form{:"ng-submit" => "savePost()", :class => "input"}
-      %input{:type => "text", :'ng-model' => 'newPost.entry', :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+   %form{:"ng-submit" => "savePost()", :name => 'input', :class => "input"}
+      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+      .error{:'ng-show' => "input.entry.$error.maxlength"}You have used too many characters! Delete a few!
       %button{:class => 'submit'} Post to Wall
 
    .font_container
@@ -25,7 +26,7 @@
    %button{:'ng-click' => "headerToggle(headerHide)", :class => "hide show" } Hide
 
 .posts
-   .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()', :'ng-hide' => 'footerShow'}
+   .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()', :'ng-hide' => 'footerShow', :'ng-class' => '{expand: headerHide}', :'ng-animate' => " 'expand' " }
       .post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-animate' => " 'animate' ", :'ng-class' => '{new: post.isNew}', :style => "background-color: rgba({{post.background}},.35)" }
          %h2{:class => "prepend"} {{post.prepend}}
          %h2{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
@@ -46,7 +47,7 @@
       %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 10, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
       .mobile_error{:'ng-show' => "mobile_input.entry.$error.maxlength"}You have used too many characters! Delete a few!
       %button{:type => 'submit', :class => 'submit'} Post to Wall
-      
+
    .mobile_color_container
       .mobile_picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
 
