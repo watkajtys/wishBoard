@@ -9,7 +9,7 @@
    $scope.backgroundColorChoice = $scope.colors[0].background
 
    
-   $scope.headerHide = false
+   $scope.headerHide = true
    $scope.headerToggle = (headerHide) ->
       $scope.headerHide = !headerHide
 
@@ -53,6 +53,11 @@
       $scope.fontChoice = Math.floor(Math.random()* 6)
       $scope.chosen = { prompt: $scope.options[$scope.choice], placeholder: $scope.placeholders[$scope.choice], font: $scope.fonts[$scope.fontChoice], color: $scope.fontColorChoice, background: $scope.backgroundColorChoice }
 
+   $scope.selectRandom = -> 
+      $scope.post = Math.floor(Math.random()*100)
+      $scope.test = $scope.posts[$scope.post]
+      console.log 'selected'
+
    $scope.initializeNewPost = ->
       $scope.selectPrompt()
       $scope.selectFont()
@@ -69,14 +74,21 @@
    $scope.loading = false
    $scope.page = 1
 
+
+   $scope.post = Math.floor(Math.random()*100)
+   $scope.test = $scope.posts[$scope.post]
+
+
    $scope.nextPage = ->
       return if $scope.loading
       $scope.loading = true
       url = "api/v1/posts.json?page=" + $scope.page
       $http.get(url).success (data) ->
-         $scope.posts = $scope.posts.concat(data);
+         $scope.posts = $scope.posts.concat(data)
          $scope.loading = false
          $scope.page = $scope.page + 1
+         $scope.selectRandom()
+
 
    $scope.savePost = ->
       console.log $scope.newPost
@@ -90,8 +102,9 @@
          (response) ->
             $scope.errors = response.data.errors
             console.log($scope.errors)
-
+   
    $scope.initializeNewPost()
    $scope.nextPage()
+
 
 @inspire.$inject = ["$scope", "$http", "Post"]
