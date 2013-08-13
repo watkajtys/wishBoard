@@ -3,7 +3,6 @@ body {
    color: #F3F2F2;
    height: 100%;
    width: 100%;
-   font-family: 'Coming Soon', cursive;
 }
 
 /****Header****/
@@ -201,23 +200,16 @@ input[type=text] {
    margin-left: 1%;
    margin-right: 1%;
    margin-top: 0px;
-   height: 68%;
+   
    overflow: scroll;
 }
 
-.post.new {
-   opacity: 0.5;
-   background-color: rgba(89,82,82,.35);
-}
-
 .post {
-   width: 30%;
-   min-width: 420px;
-   min-height: 420px;
-   display: inline-table;
+   width: 90%;
+   padding-left: 5%;
+   padding-right: 5%;
+   height: 100%;
    clear: both;
-   margin: 10px 10px 10px 10px;
-   padding: 10px 10px 10px 10px;
 }
 
 .prepend {
@@ -225,7 +217,7 @@ input[type=text] {
    text-decoration: none;
    font-family: 'Abel', sans-serif;
    text-transform: uppercase;
-   font-size: 4em;
+   font-size: 5em;
    font-weight: bolder; 
    text-decoration: none;
    clear: both;
@@ -243,8 +235,8 @@ input[type=text] {
  }
 
 .entry {
-   font-size: 3em;
-   margin-left: 10px;
+   font-size: 6em;
+   text-transform: uppercase;
    letter-spacing: 2.5px;
 }
 

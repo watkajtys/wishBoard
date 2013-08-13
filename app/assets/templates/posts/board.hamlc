@@ -1,35 +1,43 @@
-.placeholder{:'ng-show' => 'headerHide', :'ng-animate' => " 'shrink' " }
+.body
+   .header{:'ng-hide' => 'headerHide', :'ng-animate' => " 'slide' " }
+      .prompt_container
+         %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
+         %h1{:class => 'prompt'} {{chosen.prompt}}
+         %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
+
+      %form{:"ng-submit" => "savePost()", :name => 'input', :class => "input"}
+         %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 60, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
+         .error{:'ng-show' => "input.entry.$error.maxlength"}You have used too many characters! Delete a few!
+         %button{:class => 'submit'} Post to Wall
+
+      .font_container
+         %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
+         %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
+         %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
+
+      .color_container
+         .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
+
+      .search
+         %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
+
+      %button{:'ng-click' => "headerToggle(headerHide)", :class => "hide show" } Hide
+
+.post{:style => "background-color: rgb({{test.background}})"}
+   %button{:'ng-click' => "selectRandom()"} Next
    %button{:'ng-click' => "headerToggle(headerHide)", :class => "show" }Add Inspiration or Search
+   %h2{:class => "prepend"} {{test.prepend}}
+   %h2{:class => "entry", :style => "font-family: 'Source Sans Pro', sans-serif;"} {{test.entry}}
 
-.header{:'ng-hide' => 'headerHide', :'ng-animate' => " 'slide' " }
-   .prompt_container
-      %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iteratePrompt('down')"}
-      %h1{:class => 'prompt'} {{chosen.prompt}}
-      %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iteratePrompt('up')"}
 
-   %form{:"ng-submit" => "savePost()", :name => 'input', :class => "input"}
-      %input{:type => "text", :name => 'entry', :'ng-model' => 'newPost.entry', :'ng-maxlength' => 60, :placeholder => '{{chosen.placeholder}}', :style => "color: {{chosen.color}}; font-family: {{chosen.font}}"}
-      .error{:'ng-show' => "input.entry.$error.maxlength"}You have used too many characters! Delete a few!
-      %button{:class => 'submit'} Post to Wall
+   
 
-   .font_container
-      %i{:class => "icon-double-angle-left icon-4x left", :'ng-click' => "iterateFont('down')"}
-      %h1{:class => 'font', :style => 'font-family: {{chosen.font}}'} Font
-      %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
-   .color_container
-      .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
-
-   .search
-      %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
-
-   %button{:'ng-click' => "headerToggle(headerHide)", :class => "hide show" } Hide
-
-.posts
-   .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()', :'ng-hide' => 'footerShow', :'ng-class' => '{expand: headerHide}', :'ng-animate' => " 'expand' " }
-      .post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-animate' => " 'animate' ", :'ng-class' => '{new: post.isNew}', :style => "background-color: rgba({{post.background}},.35)" }
-         %h2{:class => "prepend"} {{post.prepend}}
-         %h2{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
+/ .posts
+/    .post_container{:id => 'fixed', :'when-scrolled' => 'nextPage()', :'ng-hide' => 'footerShow', :'ng-class' => '{expand: headerHide}', :'ng-animate' => " 'expand' " }
+/       .post{:'ng-repeat' => "post in posts | filter: searchFilter", :'ng-animate' => " 'animate' ", :'ng-class' => '{new: post.isNew}', :style => "background-color: rgba({{post.background}},.35)" }
+/          %h2{:class => "prepend"} {{post.prepend}}
+/          %h2{:class => "entry", :style => "color: {{post.color}}; font-family: {{post.font}}"} {{post.entry}}
 
 .footer_menu{:'ng-show' => "footerShow" }
 
