@@ -70,3 +70,23 @@
 .placeholder.shrink-show.shrink-show-active {
     height: 10%;
 }
+
+/*FADE ANIMATIONS*/
+
+.fade-show, .fade-hide { 
+    -webkit-transition:.75s ease all;
+    -moz-transition:.75s ease all;
+    -o-transition:.75s ease all;
+    transition:.75s ease all;
+} 
+ 
+.fade-hide.fade-hide-active,
+.fade-show {
+    opacity: 0;
+
+}        
+ 
+.fade-show.fade-show-active,
+.fade-hide {
+    opacity: 1; 
+}

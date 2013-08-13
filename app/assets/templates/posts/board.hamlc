@@ -16,15 +16,16 @@
          %i{:class => "icon-double-angle-right icon-4x right", :'ng-click' => "iterateFont('up')"}
 
       .color_container
-         .picker{:'ng-click' => "pickColor(color)", :'ng-repeat' => 'color in colors', :style => "background-color: {{color.font}}"}
+         .picker{:'ng-click' => "pickColor(testColor)", :'ng-repeat' => 'testColor in testColors', :style => "background-color: {{testColor}}"}
 
       .search
          %input{:type => "text", :'ng-model' => 'searchFilter', :placeholder => 'search for inspiration'}
 
       %button{:'ng-click' => "headerToggle(headerHide)", :class => "hide show" } Hide
 
-.post{:style => "background-color: rgb({{test.background}})"}
-   %button{:'ng-click' => "selectRandom()"} Next
+.post{:style => "background-color: {{test.color}}", :'ng-mouseenter' => "hover = true", :'ng-mouseleave' => "hover = false" }
+   {{test.color}}
+   %i{:class => "icon-angle-right next", :'ng-click' => "selectRandom()", :'ng-show' => "hover", :'ng-animate' => " 'fade' " }
    %button{:'ng-click' => "headerToggle(headerHide)", :class => "show" }Add Inspiration or Search
    %h2{:class => "prepend"} {{test.prepend}}
    %h2{:class => "entry", :style => "font-family: 'Source Sans Pro', sans-serif;"} {{test.entry}}

@@ -205,6 +205,10 @@ input[type=text] {
 }
 
 .post {
+   -webkit-transition:.5s ease-in-out all;
+   -moz-transition:.5s ease-in-out all;
+   -o-transition:.5s ease-in-out all;
+   transition:.5s ease-in-out all;
    width: 90%;
    padding-left: 5%;
    padding-right: 5%;
@@ -242,6 +246,13 @@ input[type=text] {
 
 .footer {
    display: none;
+}
+
+.next {
+   position: absolute; 
+   right: 5%;
+   top: 45%;
+   font-size: 8em;
 }
 
 .expand {
